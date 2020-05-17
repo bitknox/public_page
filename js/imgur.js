@@ -195,18 +195,18 @@ function fetchAlbumsImgur() {
             }
             $("#albums").append(`
             <div id="${album.id}" class="col s6 l3 clickable post">
-            <div onclick="setAlbumCurrentId('${album.id}')" class="btn-floating right waves-effect waves-light blue editButton modal-trigger" href="#editAlbumModal"><i class="material-icons">edit</i></div>
-            <div onclick="setAlbumCurrentId('${album.id}')" class="btn-floating right waves-effect waves-light red deleteButton darken-4 modal-trigger" href=#removeAlbumConfirmationModal ><i class="material-icons">clear</i></div>
-            <div class="card" onclick="location.href='./pages/album.html?id=${album.id}'">
-            <div class="card-image">
-            <img class="blurred-image unselectable" src="https://i.imgur.com/${cover}.jpg">
-            <img class="normal-image unselectable" src="https://i.imgur.com/${cover}.jpg">
-            ${str}
-            </div>
-            <div class="primary-color card-content">
-            <p class="cardDescription">${album.description}</p>
-            </div>
-            </div>
+                <div onclick="setAlbumCurrentId('${album.id}')" class="btn-floating right waves-effect waves-light blue editButton modal-trigger" href="#editAlbumModal"><i class="material-icons">edit</i></div>
+                <div onclick="setAlbumCurrentId('${album.id}')" class="btn-floating right waves-effect waves-light red deleteButton darken-4 modal-trigger" href=#removeAlbumConfirmationModal ><i class="material-icons">clear</i></div>
+                <div class="card" onclick="location.href='./pages/album.html?id=${album.id}'">
+                    <div class="card-image">
+                        <img class="blurred-image unselectable" src="https://i.imgur.com/${cover}.jpg">
+                        <img class="normal-image unselectable" src="https://i.imgur.com/${cover}.jpg">
+                        ${str}
+                    </div>
+                    <div class="primary-color card-content">
+                    <p class="cardDescription">${album.description}</p>
+                    </div>
+                </div>
             </div>`)
         });
     }
@@ -282,6 +282,8 @@ async function deleteImage(imagehash, id) {
 /**
  * sets the current selected image id
  * 
+ * Denne metode er lavet af Daniel
+ * 
  * @param {String} id id of the image
  */
 function setImageCurrentId(id) {
@@ -292,6 +294,8 @@ function setImageCurrentId(id) {
 
 /**
  * Sets the ID of the album
+ * 
+ * Denne metode er lavet af Daniel
  * 
  * @param {String} id id of the album
  */
@@ -347,7 +351,7 @@ function setActive(domID) {
 /**
  * Updates info on picture or album
  * 
- * Denne metode er lavet af Johan & Benjamin
+ * Denne metode er lavet af Johan, Daniel & Benjamin
  * 
  * @param {String} title the title of the album/picture
  * @param {String} description description for the album or picture

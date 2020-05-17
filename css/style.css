@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* Jeppe & Nikolaj */
+
+:root {
+    --primary-color: #58647A;
+    --secondary-color: #3B4450;
+    --font-family: 'Roboto';
+    --font-color: white;
+}
+
+@font-face {
+    font-family: "WaltographRegular";
+    src: url('../fonts/waltographUI.ttf');
+}
+
+@font-face {
+    font-family: "NimbusSanLConRegular";
+    src: url('../fonts/NimbusSanL.ttf');
+}
+
+@font-face {
+    font-family: "CarlitoRegular";
+    src: url('../fonts/Carlito-Regular.ttf');
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+    color: var(--font-color) !important;
+}
+
+a {
+    color: var(--font-color) !important;
+}
+
+
+/* Jeppe */
+
+.font-family {
+    font-family: var(--font-family) !important;
+}
+
+.albumSettingsMenu {
+    margin-right: 10px;
+}
+
+.albumSettingsDropdown {
+    width: 180px !important;
+}
+
+.deleteImageHelp {
+    margin-left: 5px !important;
+}
+
+.cardDescription {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardCreateDescription {
+    white-space: nowrap;
+}
+
+.deleteButton, .editButton {
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+}
+.confirmationModalFooter {
+    text-align: center !important; /* Overwrites materialize css property */
+}
+.mainlogo {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+/* Johan & Benjamin */
+.arrow {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10vh;
+    position: fixed;
+    top: 50%;
+    /* Fordi materialize giver imagecontainer z-index på 1000*/
+    z-index: 1001;
+    transition: background-color ease 200ms;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.arrow:hover > i {
+    color: white;
+}
+
+.arrow i {
+    font-size: 10vh;
+    color: lightgray;
+    transition: color ease 200ms;
+}
+
+.right-arrow {
+    right: 10%;
+}
+
+.left-arrow {
+    left: 10%;
+}
+
+/* Nikolaj */
+
+.primary-color {
+    background-color: var(--primary-color) !important;
+}
+
+.secondary-color {
+    background-color: var(--secondary-color) !important;
+}
+
+.back-button {
+    margin-left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.blurred-image {
+    position: relative;
+    top: 0;
+    filter: blur(22px);
+    /*-webkit-filter: blur(18px);*/
+    width: 100%;
+    height: 100%;
+    transition: filter ease 400ms;
+}
+
+.normal-image {
+    position: absolute;
+    width: auto;
+    height: 100%;
+}
+
+.post {
+    position: relative;
+}
+
+.card .card-image .card-title {
+    background-color: rgba(0, 0, 0, 0.0);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+    padding: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    transition: background-color ease 200ms;
+    color: var(--font-color);
+}
+
+.card .card-image img {
+    margin: auto;
+}
+
+.card:hover > .card-image .card-title {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card:hover > .card-image .blurred-image {
+    filter: blur(18px);
+}
+
+.card-image {
+    height: 150px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.image-padding {
+    padding: 39px;
+}
+
+.image-action-padding {
+    padding: 7.5px;
+}
+
+.character-counter {
+    color: black !important;
+}
